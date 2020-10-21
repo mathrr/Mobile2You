@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Mobile2You</string>
+    <string name="activity_filme_principal_image_button_favorite_descricao">Botao de Like</string>
+</resources>
