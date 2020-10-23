@@ -16,7 +16,7 @@
 
 
         <activity
-            android:name=".ui.FilmeActivity">
+            android:name=".view.FilmeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
