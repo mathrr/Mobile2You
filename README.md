@@ -1,4 +1,4 @@
-# Mobile2You\
+# Mobile2You
 Projeto Mobile2You\
 
 Projeto para a vaga de Desenvolvedor na Inspire. 3 dias para fazer e uma vaga dos sonhos.\
