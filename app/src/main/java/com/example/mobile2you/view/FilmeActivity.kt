@@ -17,13 +17,13 @@ import retrofit2.Response
 
 class FilmeActivity : AppCompatActivity() {
 
-    var favoritado = false
+    private var favoritado = false
 
-    var brfilmeID: String = "335984"
+    private var brfilmeID: String = "335984"
 
-    var posterURLBASE: String = "https://image.tmdb.org/t/p/w600_and_h900_bestv2"
+    private var posterURLBASE: String = "https://image.tmdb.org/t/p/w600_and_h900_bestv2"
 
-    var numeroDeVotos: Int = 0
+    private var numeroDeVotos: Int = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,14 +31,14 @@ class FilmeActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_filme_principal)
 
-        var call: Call<Filme> = FilmeRetrofit().apiInterface.pegaFilme(brfilmeID)
+        val call: Call<Filme> = FilmeRetrofit().apiInterface.getFilme(brfilmeID)
         call.enqueue(object : Callback<Filme> {
             override fun onFailure(call: Call<Filme>?, t: Throwable?) {
                 onError()
             }
 
             override fun onResponse(call: Call<Filme>?, response: Response<Filme>?) {
-                var filme = response?.body()!!
+                val filme = response?.body()!!
 
                 configuraNomeDoFilme(filme)
 
@@ -57,14 +57,16 @@ class FilmeActivity : AppCompatActivity() {
     }
 
     private fun configuraViewsDoFilme(filme: Filme) {
-        var popularidade =
+        val popularidade =
             findViewById<TextView>(R.id.activity_filme_principal_text_view_popularidade)
-        popularidade.setText(filme.popularidade.toString() + " views")
+        val popularidadeTexto : String = filme.popularidade.toString()
+        val stphviews = "$popularidadeTexto views"
+        popularidade.text = stphviews
     }
 
     private fun configuraNomeDoFilme(filme: Filme) {
         val nomeFilmePrincipal = findViewById<TextView>(R.id.activity_filme_principal_nome_do_filme)
-        nomeFilmePrincipal.setText(filme.titulo)
+        nomeFilmePrincipal.text = filme.titulo
     }
 
     private fun configuraPosterDoFilme(filme: Filme) {
@@ -77,9 +79,9 @@ class FilmeActivity : AppCompatActivity() {
 
     private fun configuraNumeroDeLikes(vote_count: Int) {
         numeroDeVotos = vote_count
-        var votos = findViewById<TextView>(R.id.acitivity_filme_principal_text_view_votos)
-        var votoTexto = vote_count.toString() + " likes"
-        votos.setText(votoTexto)
+        val votos = findViewById<TextView>(R.id.activity_filme_principal_text_view_votos)
+        val votoTexto = "$vote_count likes"
+        votos.text = votoTexto
     }
 
     private fun onError() {
@@ -91,7 +93,7 @@ class FilmeActivity : AppCompatActivity() {
             findViewById<ImageButton>(R.id.activity_filme_principal_image_button_favorito)
         botaoFavorito.setOnClickListener {
 
-            botaoFavorito.isSelected = !botaoFavorito.isPressed()
+            botaoFavorito.isSelected = !botaoFavorito.isPressed
 
             if (botaoFavorito.isPressed && !favoritado) {
                 botaoFavorito.setImageResource(R.drawable.ic_baseline_favorite_24)

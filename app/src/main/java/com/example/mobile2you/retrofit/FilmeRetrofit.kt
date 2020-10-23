@@ -3,7 +3,6 @@ package com.example.mobile2you.retrofit
 import com.example.mobile2you.presenter.APIInterface
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 data class FilmeRetrofit(
     var retrofit: Retrofit = Retrofit.Builder()
@@ -11,6 +10,6 @@ data class FilmeRetrofit(
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 ) {
-    var apiInterface = retrofit.create(APIInterface :: class.java)
+    var apiInterface: APIInterface = retrofit.create(APIInterface :: class.java)
 
 }

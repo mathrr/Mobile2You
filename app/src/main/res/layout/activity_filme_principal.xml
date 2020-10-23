@@ -5,7 +5,8 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/black"
+    tools:ignore="Overdraw">
 
     <ImageView
         android:id="@+id/activity_filme_principal_image_view_poster_filme_principal"
@@ -13,6 +14,7 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:contentDescription="@string/activity_filme_principal_image_view_poster_filme_principal_descricao"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -30,19 +32,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/gradient" />
+        app:srcCompat="@drawable/gradient"
+        tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/acitivity_filme_principal_text_view_votos"
+        android:id="@+id/activity_filme_principal_text_view_votos"
         android:layout_width="120dp"
         android:layout_height="20dp"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="20dp"
-        android:text="Votos"
         android:textColor="#FFFFFF"
+        android:text="@string/activity_filme_principal_missing_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-/>
+        app:layout_constraintStart_toEndOf="@+id/activity_filme_principal_image_view_votos" />
 
     <ImageButton
         android:id="@+id/activity_filme_principal_image_button_favorito"
@@ -67,20 +69,21 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/plz"
-        android:text="Nome do Filme"
+        android:text="@string/activity_filme_principal_missing_content"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/activity_filme_principal_image_view_popularidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="20dp"
+        android:contentDescription="@string/activity_filme_principal_image_view_popularidade_descricao"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/acitivity_filme_principal_text_view_votos"
+        app:layout_constraintStart_toEndOf="@+id/activity_filme_principal_text_view_votos"
         app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
 
     <TextView
@@ -89,17 +92,18 @@
         android:layout_height="20dp"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="20dp"
-        android:text="Popularidade"
+        android:text="@string/activity_filme_principal_missing_content"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2" />
+        app:layout_constraintStart_toEndOf="@+id/activity_filme_principal_image_view_popularidade" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/activity_filme_principal_image_view_votos"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="20dp"
+        android:contentDescription="@string/activity_filme_principal_image_view_votos_descricao"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_favorite_24" />
