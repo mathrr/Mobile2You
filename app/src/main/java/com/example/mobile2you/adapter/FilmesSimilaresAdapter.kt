@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile2you.R
 import com.example.mobile2you.model.Filme
 import com.example.mobile2you.model.FilmesSimilares
-import com.example.mobile2you.model.Genres
 import com.example.mobile2you.retrofit.FilmeRetrofit
 import com.squareup.picasso.Picasso
 import retrofit2.Call

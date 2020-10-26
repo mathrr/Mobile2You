@@ -8,7 +8,6 @@
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
@@ -28,7 +27,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/activity_filme_principal_image_view_gradiente_preto"
             android:layout_width="454dp"
             android:layout_height="0dp"
             android:layout_marginTop="544dp"

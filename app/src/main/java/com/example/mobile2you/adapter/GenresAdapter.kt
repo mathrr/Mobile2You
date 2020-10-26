@@ -1,6 +1,5 @@
 package com.example.mobile2you.adapter
 
-import android.util.Log
 import com.example.mobile2you.model.Genres
 import com.example.mobile2you.retrofit.FilmeRetrofit
 import retrofit2.Call
@@ -18,8 +17,8 @@ fun retornaGeneros(ids: List<Int>): String {
         }
 
         override fun onResponse(call: Call<List<Genres>>?, response: Response<List<Genres>>?) {
-            var generosResponse: List<Genres> = response?.body()!!
-            var generosMap = mutableMapOf<Int, String>()
+            val generosResponse: List<Genres> = response?.body()!!
+            val generosMap = mutableMapOf<Int, String>()
             generosResponse.forEach {
                 generosMap[it.id] = it.name
             }

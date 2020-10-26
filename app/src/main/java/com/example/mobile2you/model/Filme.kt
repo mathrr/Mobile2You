@@ -1,6 +1,5 @@
 package com.example.mobile2you.model
 
-import android.widget.TextView
 import com.google.gson.annotations.SerializedName
 
 data class Filme (

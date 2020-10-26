@@ -13,9 +13,9 @@ import retrofit2.Response
 
 private var movieID: String = "335984"
 
-private val apikey: String = "5dc5091fc0142ab27175fd181084427b"
+private const val apikey: String = "5dc5091fc0142ab27175fd181084427b"
 
-private val posterURLBASE: String = "https://image.tmdb.org/t/p/original/"
+private const val posterURLBASE: String = "https://image.tmdb.org/t/p/original/"
 
 private var numeroDeVotos: Int = 0
 

@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Mobile2You</string>
     <string name="activity_filme_principal_image_button_favorite_descricao">Botao de Like</string>
-    <string name="erro_carregar_filme"> Houve um erro em carregar o(s) filme(s)</string>
     <string name="activity_filme_principal_image_view_poster_filme_principal_descricao">Poster do Filme</string>
     <string name="activity_filme_principal_image_view_popularidade_descricao">Ícone de quantidade de visualizações</string>
     <string name="activity_filme_principal_image_view_votos_descricao">Ícone de quantidade de likes</string>
