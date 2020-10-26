@@ -11,10 +11,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class FilmeAdapter {
-
-}
-
 private var movieID: String = "335984"
 
 private val apikey: String = "5dc5091fc0142ab27175fd181084427b"
@@ -26,7 +22,7 @@ private var numeroDeVotos: Int = 0
 private var favoritado = false
 
 fun configuraViewsDoFilme(viewsDoFilme: TextView, filme: Filme) {
-    val viewsDoFilmeFormatado = "${filme.popularidade.toString()} views"
+    val viewsDoFilmeFormatado = "${filme.popularidade} views"
     viewsDoFilme.text = viewsDoFilmeFormatado
 }
 

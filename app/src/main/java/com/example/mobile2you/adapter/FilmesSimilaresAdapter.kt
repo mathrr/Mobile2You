@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile2you.R
 import com.example.mobile2you.model.Filme
 import com.example.mobile2you.model.FilmesSimilares
+import com.example.mobile2you.model.Genres
 import com.example.mobile2you.retrofit.FilmeRetrofit
 import com.squareup.picasso.Picasso
 import retrofit2.Call
@@ -48,14 +49,17 @@ class FilmesSimilaresAdapter (
         private val poster: ImageView = itemView.findViewById(R.id.filme_similar_item_imageview_poster)
         private val titulo: TextView = itemView.findViewById(R.id.filme_similar_item_textview_titulo)
         private var ano : TextView = itemView.findViewById(R.id.filme_similar_item_textview_ano)
-//        private var genero : TextView = itemView.findViewById(R.id.filme_similar_item_textview_genero)
+        private var genero : TextView = itemView.findViewById(R.id.filme_similar_item_textview_genero)
 
 
         fun bind(filme: Filme) {
             Picasso.get().load(posterURLBASE + filme.posterPath).into(poster)
+
             titulo.text = filme.titulo
 
             ano.text  = filme.dataDeLancamento.substring(0,4)
+
+            genero.text = retornaGeneros(filme.genres)
 
         }
     }
