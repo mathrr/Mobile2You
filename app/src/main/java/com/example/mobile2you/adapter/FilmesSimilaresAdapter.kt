@@ -8,11 +8,20 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile2you.R
 import com.example.mobile2you.model.Filme
+import com.example.mobile2you.model.FilmesSimilares
+import com.example.mobile2you.retrofit.FilmeRetrofit
 import com.squareup.picasso.Picasso
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class FilmesSimilaresAdapter (
     private var filmes: List<Filme>
 ) : RecyclerView.Adapter<FilmesSimilaresAdapter.MovieViewHolder>() {
+
+    private var movieID: String = "335984"
+
+    private val apikey: String = "5dc5091fc0142ab27175fd181084427b"
 
     private var posterURLBASE: String = "https://image.tmdb.org/t/p/w600_and_h900_bestv2"
 
@@ -50,4 +59,26 @@ class FilmesSimilaresAdapter (
 
         }
     }
+
+    fun configuraFilmesSimilaresNoLayout() {
+        val callSimilares: Call<FilmesSimilares> =
+            FilmeRetrofit().apiInterface.getFilmesSimilares(movieID, apikey)
+        callSimilares.enqueue(object : Callback<FilmesSimilares> {
+            override fun onFailure(call: Call<FilmesSimilares>?, t: Throwable?) {
+                //onError()
+            }
+
+            override fun onResponse(
+                call: Call<FilmesSimilares>,
+                response: Response<FilmesSimilares>
+            ) {
+                val filmesSimilares = response.body()!!
+
+                updateMovies(filmesSimilares.filmesSimilares)
+            }
+
+        })
+    }
+
 }
+
