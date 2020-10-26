@@ -4,6 +4,7 @@
       <w>appname</w>
       <w>botao</w>
       <w>brfilme</w>
+      <w>callsimilares</w>
       <w>carregar</w>
       <w>configura</w>
       <w>descricao</w>
@@ -15,6 +16,8 @@
       <w>favoritar</w>
       <w>favorito</w>
       <w>filme</w>
+      <w>filmes</w>
+      <w>formatado</w>
       <w>gradiente</w>
       <w>houve</w>
       <w>numero</w>
@@ -22,6 +25,7 @@
       <w>preto</w>
       <w>quantidade</w>
       <w>setlocal</w>
+      <w>similares</w>
       <w>texto</w>
       <w>titulo</w>
       <w>visualizações</w>

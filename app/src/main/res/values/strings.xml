@@ -6,5 +6,6 @@
     <string name="activity_filme_principal_image_view_popularidade_descricao">Ícone de quantidade de visualizações</string>
     <string name="activity_filme_principal_image_view_votos_descricao">Ícone de quantidade de likes</string>
     <string name="activity_filme_principal_missing_content">Erro</string>
+    <string name="apikey">5dc5091fc0142ab27175fd181084427b</string>
 
 </resources>
