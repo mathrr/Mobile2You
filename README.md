@@ -1,7 +1,6 @@
-# Mobile2You
-Projeto Mobile2You
+# Projeto PATMDB
 
-Projeto para a vaga de Desenvolvedor na Inspire.
+Projeto para a vaga de Desenvolvedor Android.
 
 Checklist:\
 (X) Botão de Like que muda de imagem e incrementa o número de likes\
